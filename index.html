@@ -3,6 +3,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>누픽 - 뉴스 요약 서비스</title>
     <style>
         body {
@@ -13,8 +14,9 @@
         }
         header {
             background-color: #1f4db9;
-            padding: 15px 30px;
+            padding: 15px 5vw;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
         }
@@ -23,52 +25,28 @@
             align-items: center;
         }
         .logo-area img {
-            height: 50px;
+            height: 40px;
             margin-right: 10px;
         }
         .logo-area h1 {
             color: white;
-            font-size: 1.8em;
+            font-size: 1.6em;
             margin: 0;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 8px 10px;
             font-weight: 500;
         }
-        nav {
-            display: flex;
-            align-items: center;
-        }
-        .hero {
-            background: url('hero-bg.png') center center/cover no-repeat;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
-            position: relative;
-        }
-        .hero-text {
-            background-color: rgba(0,0,0,0.6);
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            font-size: 1.4em;
-            line-height: 1.6;
-            max-width: 800px;
-        }
-        .breaking-news {
-            background-color: #1f4db9;
-            color: white;
-            padding: 12px 20px;
-            font-weight: bold;
-            font-size: 1em;
-        }
         .content {
-            padding: 60px 20px;
+            padding: 60px 5vw;
             text-align: center;
         }
         .content h2 {
@@ -86,36 +64,10 @@
             border-radius: 6px;
             font-size: 1em;
         }
-        .features {
-            display: flex;
-            justify-content: space-around;
-            padding: 60px 20px;
-            flex-wrap: wrap;
-            background: #ffffff;
-        }
-        .feature-card {
-            flex: 1;
-            min-width: 200px;
-            max-width: 300px;
-            margin: 10px;
-            text-align: center;
-        }
-        .feature-card img {
-            height: 60px;
-            margin-bottom: 10px;
-        }
-        .subscribe-info {
-            background: #f9f9f9;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .subscribe-info h2 {
-            color: #1f4db9;
-        }
         footer {
             background-color: #f2f2f2;
             text-align: center;
-            padding: 20px;
+            padding: 20px 10px;
             font-size: 0.9em;
             color: #555;
         }
@@ -123,6 +75,19 @@
             color: #1f4db9;
             margin: 0 10px;
             text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .logo-area {
+                margin-bottom: 10px;
+            }
+            nav {
+                justify-content: flex-start;
+            }
         }
     </style>
 </head>
@@ -142,47 +107,11 @@
     </nav>
 </header>
 
-<div class="hero">
-    <div class="hero-text">
-        바쁜 당신을 위한 뉴스 요약 서비스 누픽입니다.<br>
-        관심 분야만 쏙 골라 매일 전달해드립니다.<br>
-        핵심만 담은 뉴스, 매일 카카오톡으로 받아보세요.
-    </div>
-</div>
-
-<div class="breaking-news">
-    속보: 미국 CPI 발표 여파로 환율 급등, 비트코인 약세 전환
-</div>
-
 <div class="content">
     <h2>오늘의 뉴스 카테고리</h2>
     <p>정치, 경제, 사회, 연예, 스포츠, 외환 분야의 핵심 뉴스를 요약해드립니다.</p>
     <a href="#" class="subscribe-button">구독 신청하기</a>
 </div>
-
-<section class="features">
-    <div class="feature-card">
-        <img src="icon1.png" alt="핵심 뉴스">
-        <h3>핵심 요약</h3>
-        <p>중요 뉴스만 빠르게 요약하여 전달합니다.</p>
-    </div>
-    <div class="feature-card">
-        <img src="icon2.png" alt="맞춤 제공">
-        <h3>맞춤 제공</h3>
-        <p>관심 카테고리만 골라 구독할 수 있어요.</p>
-    </div>
-    <div class="feature-card">
-        <img src="icon3.png" alt="카카오톡 수신">
-        <h3>카카오톡 수신</h3>
-        <p>별도 앱 없이 카톡으로 간편하게 확인하세요.</p>
-    </div>
-</section>
-
-<section class="subscribe-info">
-    <h2>누픽은 이렇게 요약합니다</h2>
-    <p>하루 2회, 아침 7시와 저녁 6시에 맞춰<br>정치/경제/사회/외환 등 맞춤형 뉴스를 카카오톡으로 전달합니다.</p>
-    <a href="#" class="subscribe-button">구독 시작하기</a>
-</section>
 
 <footer>
     <a href="privacy-policy.html">개인정보처리방침</a> |
