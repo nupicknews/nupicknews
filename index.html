@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>누픽 - 뉴스 요약 서비스</title>
+    <title>누픽 - 1분 요약 뉴스</title>
+    <link href="https://fonts.googleapis.com/css2?family=SUIT&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Noto Sans KR', 'Segoe UI', sans-serif;
+            font-family: 'SUIT', sans-serif;
             background-color: #ffffff;
             color: #222;
         }
         header {
-            background-color: #f6f1eb;
+            background-color: #f0eae2;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             padding: 15px 5vw;
             display: flex;
             flex-wrap: wrap;
@@ -24,72 +26,76 @@
             align-items: center;
         }
         .logo-area img {
-            height: 40px;
+            height: 36px;
             margin-right: 10px;
         }
-        .logo-area h1 {
-            color: #333;
-            font-size: 1.6em;
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 10px;
-        }
         nav a {
+            margin-left: 20px;
             color: #333;
             text-decoration: none;
-            margin: 8px 10px;
             font-weight: 500;
         }
         nav a:hover {
-            color: #1f4db9;
+            color: #1e40af;
         }
         .content {
-            padding: 60px 5vw;
+            padding: 60px 5vw 30px;
             text-align: center;
         }
         .content h2 {
-            color: #1f4db9;
-            font-size: 1.6em;
+            color: #1e40af;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+        }
+        .content p {
+            font-size: 1.1em;
+            color: #555;
         }
         .subscribe-button {
             display: inline-block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            background-color: #1f4db9;
+            margin-top: 25px;
+            padding: 14px 28px;
+            background-color: #4caf50; /* 초록색 톤 */
             color: white;
             text-decoration: none;
             font-weight: bold;
             border-radius: 6px;
             font-size: 1em;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .subscribe-button:hover {
+            background-color: #66bb6a;
+        }
+        .category-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .category-icons div {
+            text-align: center;
+            font-size: 0.9em;
+            color: #444;
+        }
+        .category-icons img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 8px;
         }
         footer {
-            background-color: #f2f2f2;
+            background-color: #f4f4f4;
             text-align: center;
-            padding: 20px 10px;
-            font-size: 0.9em;
+            padding: 30px 20px 10px;
+            font-size: 0.85em;
             color: #555;
+            line-height: 1.6;
         }
         footer a {
-            color: #1f4db9;
+            color: #1e40af;
             margin: 0 10px;
             text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .logo-area {
-                margin-bottom: 10px;
-            }
-            nav {
-                justify-content: flex-start;
-            }
         }
     </style>
 </head>
@@ -97,8 +103,7 @@
 
 <header>
     <div class="logo-area">
-        <img src="piki.png" alt="픽이 캐릭터">
-        <h1>누픽</h1>
+        <img src="images/nupick.png" alt="누픽 로고">
     </div>
     <nav>
         <a href="#">홈</a>
@@ -109,22 +114,30 @@
 </header>
 
 <div class="content">
-    <h2>오늘의 뉴스 카테고리</h2>
-    <p>정치, 경제, 사회, 연예, 스포츠, 외환 분야의 핵심 뉴스를 요약해드립니다.</p>
-    <a href="#" class="subscribe-button">구독 신청하기</a>
-</div>
+    <h2>당신의 아침을 바꾸는 1분 요약 뉴스</h2>
+    <p>정치, 경제, 사회, 연예, 스포츠, 외환, 문화 7가지 핵심 뉴스를 매일 아침 카카오톡으로 전해드립니다.</p>
+    <a href="subscribe.html" class="subscribe-button">📩 구독 신청하기</a>
 
-<div style="background:#f9f9f9; padding:30px 20px; font-size:0.85em; color:#555; text-align:center; line-height:1.6;">
-    <div><strong>대표자</strong> : 장성현 &nbsp; | &nbsp; <strong>사업자등록번호</strong> : 744-17-02542</div>
-    <div><strong>사업장주소</strong> : 부산광역시 남구 전포대로 84-1 102동 2101호</div>
-    <div><strong>통신판매업 신고번호</strong> : 제 2025-부산남구-00412호</div>
-    <div><strong>이메일</strong> : crayon@nupicnews.com &nbsp; | &nbsp; <strong>개인정보책임자</strong> : 장성현</div>
-    <div><strong>카카오채널</strong> : <a href="http://pf.kakao.com/_IuRwn" target="_blank">누픽 채널 바로가기</a></div>
+    <div class="category-icons">
+        <div><img src="images/icon-politics.png" alt="정치"><br>정치</div>
+        <div><img src="images/icon-economy.png" alt="경제"><br>경제</div>
+        <div><img src="images/icon-society.png" alt="사회"><br>사회</div>
+        <div><img src="images/icon-entertainment.png" alt="연예"><br>연예</div>
+        <div><img src="images/icon-sports.png" alt="스포츠"><br>스포츠</div>
+        <div><img src="images/icon-forex.png" alt="외환"><br>외환</div>
+        <div><img src="images/icon-culture.png" alt="문화"><br>문화</div>
+    </div>
 </div>
 
 <footer>
+    <div><strong>대표자</strong>: 장성현 | <strong>사업자등록번호</strong>: 744-17-02542</div>
+    <div><strong>사업장주소</strong>: 부산광역시 남구 전포대로 84-1 102동 2101호</div>
+    <div><strong>통신판매업 신고번호</strong>: 제 2025-부산남구-00412호</div>
+    <div><strong>이메일</strong>: crayon@nupicknews.com | <strong>개인정보책임자</strong>: 장성현</div>
+    <div><strong>카카오채널</strong>: <a href="http://pf.kakao.com/_IuRwn" target="_blank">누픽 채널 바로가기</a></div>
+    <br>
     <a href="privacy-policy.html">개인정보처리방침</a> |
-    <a href="terms-of-service.html">이용약관</a> 
+    <a href="terms-of-service.html">이용약관</a>
 </footer>
 
 </body>
