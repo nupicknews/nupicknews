@@ -21,9 +21,10 @@
       flex-wrap: wrap;
     }
     .logo {
-  height: 80px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-}
+      height: 80px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
     .nav {
       display: flex;
       gap: 20px;
@@ -34,6 +35,7 @@
       text-decoration: none;
       color: #333;
       transition: transform 0.2s ease, color 0.2s ease;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
     }
     .nav a:hover {
       transform: scale(1.05);
@@ -47,26 +49,27 @@
       font-size: 1.6rem;
       color: #004c99;
     }
-    .category-grid {
+    .text-category-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-      padding: 0 20px;
+      gap: 16px;
+      padding: 40px 20px;
+      max-width: 700px;
+      margin: 0 auto;
     }
-    .category {
+    .text-category {
+      background-color: #f0f8ff;
+      color: #004c99;
+      border-radius: 12px;
+      padding: 16px 0;
       text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: background-color 0.2s;
     }
-    .category img {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-      margin-bottom: 8px;
-    }
-    .category span {
-      display: block;
-      font-size: 0.9rem;
-      color: #444;
+    .text-category:hover {
+      background-color: #dceeff;
     }
     footer {
       background-color: #f9f9f9;
@@ -87,7 +90,11 @@
       .logo {
         height: 70px;
       }
-      .category-grid {
+      .text-category {
+        font-size: 0.95rem;
+        padding: 12px 0;
+      }
+      .text-category-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -97,12 +104,11 @@
   <header>
     <img class="logo" src="images/logo.png" alt="누픽 로고" />
     <nav class="nav">
-  <a href="index.html">홈</a>
-  <a href="service.html">서비스 소개</a>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScNCJyXBV9zOsfUnwjn04uNdSoPnlNuQqej9UIttV1otXUcVA/viewform?usp=sharing" target="_blank">구독</a>
-  <a href="contact.html">문의</a>
-</nav>
-
+      <a href="index.html">홈</a>
+      <a href="service.html">서비스 소개</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScNCJyXBV9zOsfUnwjn04uNdSoPnlNuQqej9UIttV1otXUcVA/viewform?usp=sharing" target="_blank">구독</a>
+      <a href="contact.html">문의</a>
+    </nav>
   </header>
 
   <div class="content">
@@ -117,37 +123,7 @@
       <div class="text-category">스포츠</div>
       <div class="text-category">세계</div>
     </div>
-
-    <style>
-      .text-category-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 16px;
-        padding: 40px 20px;
-        max-width: 700px;
-        margin: 0 auto;
-      }
-      .text-category {
-        background-color: #f0f8ff;
-        color: #004c99;
-        border-radius: 12px;
-        padding: 16px 0;
-        text-align: center;
-        font-size: 1rem;
-        font-weight: 600;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        transition: background-color 0.2s;
-      }
-      .text-category:hover {
-        background-color: #dceeff;
-      }
-      @media (max-width: 480px) {
-        .text-category {
-          font-size: 0.95rem;
-          padding: 12px 0;
-        }
-      }
-    </style>
+  </div>
 
   <footer>
     대표자: 장성현 | 사업자등록번호: 744-17-02542<br />
