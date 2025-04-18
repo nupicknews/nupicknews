@@ -3,82 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>서비스 소개 | 누픽</title>
+  <title>누픽 - 서비스 소개</title>
   <style>
-    body { margin: 0; font-family: 'Arial', sans-serif; background-color: #ffffff; color: #222; }
-    header { background-color: #1746d4; color: #fff; padding: 16px 32px; display: flex; justify-content: space-between; align-items: center; }
-    header img { height: 32px; margin-right: 8px; vertical-align: middle; }
-    header .logo { display: flex; align-items: center; font-weight: bold; font-size: 20px; }
-    nav a { margin-left: 24px; color: #fff; text-decoration: none; font-weight: 500; }
-    nav a:hover { text-decoration: underline; }
-    main { padding: 40px 24px; max-width: 800px; margin: auto; }
-    h1, h2 { color: #1a1a1a; }
-    .section { margin-bottom: 40px; }
-    .highlight { background: #e8f0fe; padding: 4px 8px; border-radius: 4px; font-weight: bold; }
-    footer { font-size: 0.9em; color: #666; border-top: 1px solid #ddd; padding: 20px; text-align: center; background-color: #f9f9f9; }
-    footer a { color: #1746d4; text-decoration: none; margin: 0 8px; }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #222;
+    }
+    header {
+      background-color: #F5EEE6;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 80px;
+      margin-right: 16px;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #333;
+    }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    footer {
+      background-color: #f9f9f9;
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      text-align: center;
+      color: #555;
+    }
+    footer a {
+      color: #5a0fc8;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav {
+        margin-top: 12px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- 픽이 로고 삽입 (상단 중앙 정렬) -->
-<div style="text-align: center; margin-bottom: 20px;">
-  <img src="images/piki.png" alt="누픽 픽이 로고" style="width: 150px; height: auto;">
-</div>
-
   <header>
-    <div class="logo">
-      <img src="/assets/logo-piki.png" alt="픽이 로고" />
-      누픽
-    </div>
-    <nav>
+    <img class="logo" src="logo.png" alt="누픽 로고" />
+    <nav class="nav">
       <a href="index.html">홈</a>
-      <a href="service.html">서비스소개</a>
-      <a href="#">카테고리</a>
-      <a href="#">구독</a>
-      <a href="#">문의</a>
+      <a href="service.html">서비스 소개</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScNCJyXBV9zOsfUnwjn04uNdSoPnlNuQqej9UIttV1otXUcVA/viewform?usp=sharing" target="_blank">구독</a>
+      <a href="contact.html">문의</a>
     </nav>
   </header>
 
-  <main>
+  <div class="content">
     <h1>누픽 서비스 소개</h1>
-    <p><strong>누픽은 매일 아침, 정치 · 경제 · 사회 · 문화 · 연예 · 스포츠 · 환율 등 핵심 뉴스를 요약하여 카카오톡으로 전달하는 구독형 뉴스 서비스입니다.</strong></p>
-
-    <div class="section">
-      <h2>1. 서비스 개요</h2>
-      <p>누픽(Nupick)은 바쁜 현대인을 위한 <span class="highlight">뉴스 요약 콘텐츠 정기 구독 서비스</span>입니다. 구독자는 구글폼을 통해 신청 후, 매일 아침 카카오톡을 통해 뉴스를 받아보게 됩니다.</p>
-    </div>
-
-    <div class="section">
-      <h2>2. 구독 요금</h2>
-      <ul>
-        <li><strong>7일 무료 체험</strong> 제공</li>
-        <li>이후 <strong>월 2,900원</strong> (하루 약 97원 수준)</li>
-        <li><strong>카카오페이 정기결제</strong> 방식 적용</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>3. 정기결제 및 해지</h2>
-      <p>서비스는 정기결제로 운영되며, 언제든 카카오톡 채널을 통해 <strong>해지 요청이 가능</strong>합니다. 무료 체험 기간 중에는 결제가 발생하지 않습니다.</p>
-    </div>
-
-    <div class="section">
-      <h2>4. 문의 및 고객 지원</h2>
-      <ul>
-        <li><a href="http://pf.kakao.com/_IuRwn" target="_blank">카카오톡 채널 1:1 문의</a></li>
-        <li>이메일: crayon@nupicknews.com</li>
-      </ul>
-    </div>
-  </main>
+    <p>누픽은 하루 1분, 바쁜 당신을 위해 정치, 경제, 사회, 연예, 스포츠, 세계 6가지 핵심 뉴스를 요약하여 전달하는 서비스입니다.<br/>
+    카카오톡으로 매일 아침 빠르고 간결한 정보를 받아보세요.</p>
+  </div>
 
   <footer>
-    <p><strong>대표자:</strong> 장성현 | <strong>사업자등록번호:</strong> 744-17-02542<br>
-    <strong>주소:</strong> 부산광역시 남구 전포대로 84-1 102동 2101호<br>
-    <strong>통신판매업 신고번호:</strong> 제 2025-부산남구-00412호</p>
-    <p>
-      <a href="privacy.html">개인정보처리방침</a> |
-      <a href="terms.html">이용약관</a>
-    </p>
+    대표자: 장성현 | 사업자등록번호: 744-17-02542<br />
+    사업장주소: 부산광역시 남구 전포대로 84-1 102동 2101호<br />
+    통신판매업 신고번호: 제 2025-부산남구-00412호<br />
+    이메일: crayon@nupicknews.com | 개인정보책임자: 장성현<br />
+    카카오채널: <a href="http://pf.kakao.com/_IuRwn" target="_blank">누픽 채널 바로가기</a><br /><br />
+    <a href="privacy-policy.html">개인정보처리방침</a> | <a href="terms-of-service.html">이용약관</a>
   </footer>
 </body>
 </html>
