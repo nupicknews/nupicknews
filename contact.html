@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>누픽 - 문의하기</title>
+  <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #ffffff;
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'SUIT', 'Noto Sans KR', sans-serif;
       color: #222;
     }
     header {
@@ -21,18 +22,25 @@
       flex-wrap: wrap;
     }
     .logo {
-  height: 80px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-}
+      height: 80px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    }
     .nav {
       display: flex;
       gap: 20px;
-      font-size: 1rem;
+      font-size: 1.05rem;
       flex-wrap: wrap;
     }
     .nav a {
       text-decoration: none;
-      color: #333;
+      color: #222;
+      font-weight: 600;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .nav a:hover {
+      transform: scale(1.05);
+      color: #004c99;
     }
     .content {
       max-width: 640px;
