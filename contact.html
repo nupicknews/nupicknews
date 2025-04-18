@@ -3,56 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>문의하기 | 누픽</title>
+  <title>누픽 - 문의하기</title>
   <style>
-    body { margin: 0; font-family: 'Arial', sans-serif; background-color: #ffffff; color: #222; }
-    header { background-color: #1746d4; color: #fff; padding: 16px 32px; display: flex; justify-content: space-between; align-items: center; }
-    header img { height: 32px; margin-right: 8px; vertical-align: middle; }
-    header .logo { display: flex; align-items: center; font-weight: bold; font-size: 20px; }
-    nav a { margin-left: 24px; color: #fff; text-decoration: none; font-weight: 500; }
-    nav a:hover { text-decoration: underline; }
-    main { padding: 40px 24px; max-width: 800px; margin: auto; text-align: center; }
-    h1 { color: #1a1a1a; }
-    ul { list-style: none; padding: 0; }
-    li { margin: 10px 0; font-size: 1.1em; }
-    a.link { color: #1746d4; font-weight: bold; text-decoration: none; }
-    a.link:hover { text-decoration: underline; }
-    footer { font-size: 0.9em; color: #666; border-top: 1px solid #ddd; padding: 20px; text-align: center; background-color: #f9f9f9; }
-    footer a { color: #1746d4; text-decoration: none; margin: 0 8px; }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #222;
+    }
+    header {
+      background-color: #F5EEE6;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      height: 80px;
+      margin-right: 16px;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+      font-size: 1rem;
+      flex-wrap: wrap;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #333;
+    }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    footer {
+      background-color: #f9f9f9;
+      padding: 30px 20px;
+      font-size: 0.85rem;
+      text-align: center;
+      color: #555;
+    }
+    footer a {
+      color: #5a0fc8;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav {
+        margin-top: 12px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="/assets/logo-piki.png" alt="픽이 로고" />
-      누픽
-    </div>
-    <nav>
+    <img class="logo" src="logo.png" alt="누픽 로고" />
+    <nav class="nav">
       <a href="index.html">홈</a>
-      <a href="service.html">서비스소개</a>
-      <a href="category.html">카테고리</a>
-      <a href="subscribe.html">구독</a>
+      <a href="service.html">서비스 소개</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScNCJyXBV9zOsfUnwjn04uNdSoPnlNuQqej9UIttV1otXUcVA/viewform?usp=sharing" target="_blank">구독</a>
       <a href="contact.html">문의</a>
     </nav>
   </header>
 
-  <main>
-    <h1>누픽 문의하기</h1>
-    <p>서비스에 대한 문의, 개선 제안, 제휴 제안은 아래 채널을 통해 연락해주세요.</p>
-    <ul>
-      <li>📧 이메일: <a class="link" href="mailto:crayon@nupicknews.com">crayon@nupicknews.com</a></li>
-      <li>💬 카카오톡: <a class="link" href="http://pf.kakao.com/_IuRwn" target="_blank">누픽 채널 바로가기</a></li>
-    </ul>
-  </main>
-
   <footer>
-    <p><strong>대표자:</strong> 장성현 | <strong>사업자등록번호:</strong> 744-17-02542<br>
-    <strong>주소:</strong> 부산광역시 남구 전포대로 84-1 102동 2101호<br>
-    <strong>통신판매업 신고번호:</strong> 제 2025-부산남구-00412호</p>
-    <p>
-      <a href="privacy.html">개인정보처리방침</a> |
-      <a href="terms.html">이용약관</a>
-    </p>
+    대표자: 장성현 | 사업자등록번호: 744-17-02542<br />
+    사업장주소: 부산광역시 남구 전포대로 84-1 102동 2101호<br />
+    통신판매업 신고번호: 제 2025-부산남구-00412호<br />
+    이메일: crayon@nupicknews.com | 개인정보책임자: 장성현<br />
+    카카오채널: <a href="http://pf.kakao.com/_IuRwn" target="_blank">누픽 채널 바로가기</a><br /><br />
+    <a href="privacy-policy.html">개인정보처리방침</a> | <a href="terms-of-service.html">이용약관</a>
   </footer>
 </body>
 </html>
