@@ -35,19 +35,30 @@
       color: #333;
     }
     .content {
-      max-width: 800px;
+      max-width: 640px;
       margin: 0 auto;
       padding: 40px 20px;
-      text-align: left;
+      line-height: 1.8;
     }
-    .content h2 {
-      font-size: 1.4rem;
-      margin-top: 40px;
+    h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
       color: #004c99;
     }
-    .content p {
-      font-size: 1rem;
-      line-height: 1.8;
+    .num {
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    ul {
+      padding-left: 20px;
     }
     footer {
       background-color: #f9f9f9;
@@ -87,35 +98,35 @@
 
   <div class="content">
     <h1>누픽 서비스 소개</h1>
-    
-    <h2>1. 서비스 개요</h2>
-    <p>
-      누픽은 핵심만 골라 전하는 맞춤형 요약 뉴스 서비스를 제공합니다.<br>
-      바쁜 일상 속 꼭 필요한 뉴스만 간결하게 받아보세요.
-    </p>
 
-    <h2>2. 발송 방법</h2>
-    <p>
-      누픽은 구독자님의 카카오톡으로 맞춤형 뉴스를 전달합니다.
-    </p>
+    <div class="section">
+      <h2><span class="num">1.</span> 서비스 개요</h2>
+      <p>누픽은 핵심만 골라 전하는 맞춤형 요약 뉴스 서비스를 제공합니다.<br>
+      바쁜 일상 속 꼭 필요한 뉴스만 간결하게 받아보세요.</p>
+    </div>
 
-    <h2>3. 발송 시간</h2>
-    <p>
-      매일 오전 7시, 오후 6시<br>
-      하루 두 번 핵심 뉴스가 전달됩니다.
-    </p>
+    <div class="section">
+      <h2><span class="num">2.</span> 발송 방법</h2>
+      <p>누픽은 구독자님의 카카오톡으로 맞춤형 뉴스를 전달합니다.</p>
+    </div>
 
-    <h2>4. 구독 요금</h2>
-    <p>
-      일일 100원 기준<br>
-      월 구독 시 2,900원에 제공됩니다.
-    </p>
+    <div class="section">
+      <h2><span class="num">3.</span> 발송 시간</h2>
+      <p>매일 오전 7시, 오후 6시<br>하루 두 번 핵심 뉴스가 전달됩니다.</p>
+    </div>
 
-    <h2>5. 선택 사항</h2>
-    <p>
-      • 외환 정보를 포함한 요약 뉴스 제공<br>
-      • 이메일 입력 시, 매주 월요일 전주의 주간 요약 뉴스 제공 (선택사항)
-    </p>
+    <div class="section">
+      <h2><span class="num">4.</span> 구독 요금</h2>
+      <p>일일 100원 기준<br>월 구독 시 2,900원에 제공됩니다.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="num">5.</span> 추가 혜택</h2>
+      <ul>
+        <li>외환 정보를 포함한 요약 뉴스 제공</li>
+        <li>이메일 입력 시, 매주 월요일 주간 뉴스 제공</li>
+      </ul>
+    </div>
   </div>
 
   <footer>
